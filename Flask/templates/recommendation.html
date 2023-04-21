@@ -1,0 +1,19 @@
+<header class="page-header">
+  <div class="container flow">
+    <h1 class="page-title">Thanks for your epic review</h1>
+    <p class="page-subtitle">Some killer suggestions for you!</p>
+  </div>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/try.css') }}">
+</header>
+<h2 class="section-title">Movie Gallary</h2>
+
+<div class="media-scroller snaps-inline">
+  {% for key, value in distinct_dic.items() %}
+  <div class="media-element">
+    <a href="/movie_title/movie_recommendation/detail?movie_id={{ key }}&image_url={{ value[1] }}">
+      <img src="{{ value[1] }}" alt="">
+    </a>
+    <p class="title"> {{ value[0] }} </p>
+  </div>
+  {% endfor %}
+</div>
