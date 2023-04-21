@@ -2,15 +2,15 @@
 This Flask application is designed to provide a movie search, rating, and recommendation system for users. The application allows users to search for movies based on title, view movie details, and receive recommendations based on movie ratings and reviews. The application uses the following libraries: Flask, os, urllib, and json.
 
 ### How to Use the Application 
-Clone the repository to your local machine. 
-Install the required libraries using pip: Flask, os, urllib, and json. 
-Run the Flask application in your terminal using the command: python3 run.py. 
-Open your browser and navigate to http://localhost:5000/ to access the main page. 
-Enter a movie title in the search bar and click the 'Search' button. 
-The application will display a list of movies based on the user's search query. Select a movie to view more details or receive recommendations. 
-To view more details about a movie, click the 'View Details' button. 
-To receive recommendations, rate the movie and write a review, then click the 'Get Recommendations' button. 
-The application will display a list of recommended movies based on the user's ratings and reviews. 
+Clone the repository to your local machine.  
+Install the required libraries using pip: Flask, os, urllib, and json.  
+Run the Flask application in your terminal using the command: python3 run.py.  
+Open your browser and navigate to http://localhost:5000/ to access the main page.  
+Enter a movie title in the search bar and click the 'Search' button.  
+The application will display a list of movies based on the user's search query. Select a movie to view more details or receive recommendations.  
+To view more details about a movie, click the 'View Details' button.  
+To receive recommendations, rate the movie and write a review, then click the 'Get Recommendations' button.  
+The application will display a list of recommended movies based on the user's ratings and reviews.  
 
 ### Functionality The application is built using Flask and consists of several routes:
 
