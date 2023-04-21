@@ -4,12 +4,21 @@ This Flask application is designed to provide a movie search, rating, and recomm
 ### How to Use the Application 
 1. Clone the repository to your local machine.  
 2. Install the required libraries using pip: Flask, os, urllib, and json.  
-3. Run the Flask application in your terminal using the command: python3 run.py.Open your browser and navigate to http://localhost:5000/ to access the main page.  
-4. Enter a movie title in the search bar and click the 'Search' button.  
-5. The application will display a list of movies based on the user's search query. Select a movie to view more details or receive recommendations.  
-6. To view more details about a movie, click the 'View Details' button.  
-7. To receive recommendations, rate the movie and write a review, then click the 'Get Recommendations' button.  
-8. The application will display a list of recommended movies based on the user's ratings and reviews.  
+3. Add keys.json file into the Flask package. This file should contains your keys of APIs and formated like the following (remember to replace the "keys" with your actual keys).  
+
+{
+"imdb_key": "bc3b40128dmsh1558d00bcfcd8dcp191100jsna0bc375af127",
+"ott_key": "bc3b40128dmsh1558d00bcfcd8dcp191100jsna0bc375af127",
+"omdb_key": "b01f6256",
+"chatgpt_key": "8631598b3bmsh595d66be6727323p16ec51jsn93374a85ec60"
+}
+
+4. Run the Flask application in your terminal using the command: python3 run.py.Open your browser and navigate to http://localhost:5000/ to access the main page.  
+5. Enter a movie title in the search bar and click the 'Search' button.  
+6. The application will display a list of movies based on the user's search query. Select a movie to view more details or receive recommendations.  
+7. To view more details about a movie, click the 'View Details' button.  
+8. To receive recommendations, rate the movie and write a review, then click the 'Get Recommendations' button.  
+9. The application will display a list of recommended movies based on the user's ratings and reviews.  
 
 ### Functionality The application is built using Flask and consists of several routes:
 
