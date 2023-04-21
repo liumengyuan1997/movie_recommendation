@@ -4,7 +4,7 @@ This Flask application is designed to provide a movie search, rating, and recomm
 ### How to Use the Application 
 1. Clone the repository to your local machine.  
 2. Install the required libraries using pip: Flask, os, urllib, and json.  
-3. Add keys.json file into the Flask package. This file should contains your keys of APIs and formated like the following (remember to replace the "key" with your actual keys).  
+3. Add keys.json file into the Flask package. This file should contain your keys of APIs and formatted like the following (remember to replace the "key" with your actual keys).  
 
   {
   "imdb_key": "key",
