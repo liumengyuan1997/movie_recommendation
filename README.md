@@ -7,11 +7,11 @@ This Flask application is designed to provide a movie search, rating, and recomm
 3. Add keys.json file into the Flask package. This file should contain your keys of your Flask app and APIs and formatted like the following (remember to replace the "key" with your actual keys).  
 
   {
-  <br> "app_secret_key" = "key",  
-  <br> "imdb_key": "key",
-  <br> "ott_key": "key",
-  <br> "omdb_key": "key",
-  <br>"chatgpt_key": "key"
+  <br>   "app_secret_key" = "key",
+  <br>   "imdb_key": "key",
+  <br>   "ott_key": "key",
+  <br>   "omdb_key": "key",
+  <br>   "chatgpt_key": "key"
   }
 
 4. Run the Flask application in your terminal using the command: python3 run.py.Open your browser and navigate to http://localhost:5000/ to access the main page.  
