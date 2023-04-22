@@ -1,5 +1,5 @@
 ## Flask Application for a Movie Search, Rating, and Recommendation System
-This Flask application is designed to provide a movie search, rating, and recommendation system for users. The application allows users to search for movies based on title, view movie details, and receive recommendations based on movie ratings and reviews. The application uses the following libraries: Flask, os, urllib, and json.
+This Flask application is designed to provide a movie search, rating, and recommendation system for users. The application allows users to search for movies based on title, view movie details, and receive recommendations based on movie ratings and reviews. The application uses the following libraries: Flask, os, urllib, json, requests, and re.
 
 ### How to Use the Application 
 1. Clone the repository to your local machine.  
@@ -20,8 +20,8 @@ pip install Flask urllib requests
 4. Run the Flask application in your terminal using the command: python3 run.py. Open your browser and navigate to http://127.0.0.1:5000 to access the main page.  
 5. Enter a movie title in the search bar and click the 'Search' button.  
 6. The application will display a list of movies based on the user's search query. Select a movie to view more details or receive recommendations.  
-7. To view more details about a movie, click the 'View Details' button.  
-8. To receive recommendations, rate the movie and write a review, then click the 'Get Recommendations' button.  
+7. To view more details about a movie, click the 'Want to watch' button.  
+8. To rate the movie, write a review, and receive recommendations, then click the 'Already watched' button.  
 9. The application will display a list of recommended movies based on the user's ratings and reviews.  
 
 ### Functionality The application is built using Flask and consists of several routes:
@@ -32,7 +32,7 @@ pip install Flask urllib requests
 
 /id/<movie_id>: This route renders the movie_rating.html template, displaying movie details such as title, image, release year, genre, synopsis, and ratings, based on the movie_id parameter passed to the URL.
 
-/movie_title/movie_recommendation: This route renders the get_review.html template, allowing the user to rate a movie and write a review to receive recommendations for similar movies.
+/movie_title/movie_recommendation: This route renders the get_review.html template, allowing the user to rate a movie and write a review to receive recommendations for similar movies. If a POST request is received, the user will receive movie recommendations based on their previous rating and reviews.
 
 /movie_title/movie_recommendation/detail: This route renders the movie_rating.html template, displaying detailed movie information based on the movie_id and image_url parameters passed in the URL.
 
