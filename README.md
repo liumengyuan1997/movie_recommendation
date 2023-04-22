@@ -5,7 +5,7 @@ This Flask application is designed to provide a movie search, rating, and recomm
 1. Clone the repository to your local machine.  
 2. Install the required libraries using pip: Flask, os, urllib, and json.  
 3. Add keys.json file into the Flask package. This file should contain your keys of your Flask app and APIs and formatted like the following (remember to replace the "key" with your actual keys).  
-
+'''json
   {
     <br>  "app_secret_key" = "key",
     <br>  "imdb_key": "key",
@@ -13,7 +13,7 @@ This Flask application is designed to provide a movie search, rating, and recomm
     <br>  "omdb_key": "key",
     <br>  "chatgpt_key": "key"
     <br>}
-
+'''
 4. Run the Flask application in your terminal using the command: python3 run.py.Open your browser and navigate to http://localhost:5000/ to access the main page.  
 5. Enter a movie title in the search bar and click the 'Search' button.  
 6. The application will display a list of movies based on the user's search query. Select a movie to view more details or receive recommendations.  
