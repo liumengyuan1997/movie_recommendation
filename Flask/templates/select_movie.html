@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Arizonia'
+    rel='stylesheet'>
+    <title>Movie Confirmation</title>
+    <meta charset="UTF-8">
+    <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    </script>
+    <script src="{{ url_for('static', filename='js/myscript.js') }}"></script>
+    <link rel="stylesheet" href=
+    "{{ url_for('static', filename='css/style.css') }}">
+    <h1>Confirm Your Movie Choice</h1>
+  </head>
+
+  <body>
+    {% set img_ls_len = image_ls | length %}
+
+    <!-- Container for the image gallery -->
+    <div class="slideshow-container">
+      {% for i in range(img_ls_len) %}
+      <div class="mySlides fade">
+        <img class = "images" id="[i]" src="{{ image_ls[i] }}"
+        style="object-fit:contain; width:300px;
+        height:450px; border: solid 1px #CCC">
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <br>
+
+      <!-- Thumbnail images -->
+      <div class="row">
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          {% for i in range(img_ls_len) %}
+          <span class="dot" onclick="currentSlide({{ i + 1 }})"></span>
+          {% endfor %}
+        </div>
+
+      </div>
+
+    <div class="form-container">
+      <label for="frame">Please choose the correct title and release year:
+      </label>
+      <form method="POST" action="" enctype="multipart/form-data">
+        <select name="title" id="title">
+          {% for key, value in info_dic.items() %}
+          <option value="{{ value[0] }}">{{ value[0] }}</option>
+          {% endfor %}
+        </select>
+
+        <select name="year" id="year">
+          {% for key, value in info_dic.items() %}
+          <option value="{{ value[2] }}">{{ value[2] }}</option>
+          {% endfor %}
+        </select>
+
+        <label>
+          <input type="radio" name="choice" value="option1">
+          Want to Watch
+        </label>
+        <label>
+          <input type="radio" name="choice" value="option2">
+          Already Watched
+        </label>
+
+        <div id="button-wrapper">
+          <button class="submit" type="submit">Search</button>
+          <div class="loader-wrapper">
+            <span class="loader yellow"></span>
+            <span class="loader pink"></span>
+          </div>
+
+          <span class="loader orange"></span>
+
+          <div class="check-wrapper">
+            <svg version="1.1"width="65px" height="38px"
+            viewBox="0 0 64.5 37.4">
+              <polyline class="check" points="5,13 21.8,32.4 59.5,5 "/>
+            </svg>
+          </div>
+       </div>
+      </form>
+    </div>
+
+  </body>
+</html>

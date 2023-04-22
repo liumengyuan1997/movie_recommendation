@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Arizonia'
+    rel='stylesheet'>
+    <title>Movie Rating and Recommendation</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static',
+    filename='css/style.css') }}">
+    <h1>Movie Details</h1>
+  </head>
+
+  <body>
+    <div class="row_display", margin-top: 40px>
+      <div class="column" id="left_column">
+      <img src="{{ movie_url }}">
+      </div>
+      <div class="column" id="right_column">
+        <h2>Movie Details</h2>
+        <p>Genre:
+          {% set item_count = info_ls[0] | length %}
+          {% for i in range(item_count) %}
+          {{ info_ls[0][i] }}
+          {% if i != item_count - 1%}
+          {{', '}}
+          {% endif %}
+          {% endfor %}
+        </p>
+        <p>Runtime: {{ info_ls[1] }}</p>
+        <p>Rating: {{ info_ls[2] }}</p>
+        <p>Synopsis: {{ info_ls[3] }}</p>
+        {% set item_count = info_ls[5] | length %}
+        <h2>Resources</h2>
+        {% for i in range(item_count) %}
+        <a href="{{info_ls[5][i]['url']}}",
+        style="color: rgb(112, 28, 28);
+        text-shadow: 0 0 4px rgb(255, 250, 250)">
+        {{info_ls[5][i]['platform']}}</a>
+        <br>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
