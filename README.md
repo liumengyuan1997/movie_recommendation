@@ -17,7 +17,7 @@ pip install Flask urllib requests
     "chatgpt_key": "key"
    }
 ```
-4. Run the Flask application in your terminal using the command: python3 run.py.Open your browser and navigate to http://localhost:5000/ to access the main page.  
+4. Run the Flask application in your terminal using the command: python3 run.py. Open your browser and navigate to http://localhost:5000/ to access the main page.  
 5. Enter a movie title in the search bar and click the 'Search' button.  
 6. The application will display a list of movies based on the user's search query. Select a movie to view more details or receive recommendations.  
 7. To view more details about a movie, click the 'View Details' button.  
